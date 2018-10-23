@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Gerador de Apostas</title>
+	<link rel="icon" href="img/four_leaf_clover.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<main class="container">
+		<h1>Gerador de Apostas</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="./index.html">
+						Início
+					</a>
+				</li>
+				<li>
+					<a href="./gerador.html">
+						Gerador de Apostas
+					</a>
+				</li>
+				<li>
+					<a href="./about.html">
+						Sobre
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<article id="conteudo">
+
+			<div class="form-group">
+				<label for="sel1">Tipo do jogo</label>
+				<select class="form-control" id="sel1">
+					<option id="opcao">Mega-Sena</option>
+					<option id="opcao">Lotofácil</option>
+					<option id="opcao">Quina</option>
+					<option id="opcao">Lotomania</option>
+				</select>
+			</div>
+
+			<button class="btn btn-success btn-sm" onclick="gerarAposta()">Gerar Aposta</button>
+
+			<hr>
+
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<td>Jogos</td>
+					</tr>
+				</thead>
+				<tbody id="tabela">
+
+				</tbody>
+			</table>
+		</article>
+	</main>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+
+</html>
