@@ -6,23 +6,22 @@ function gerarAposta() {
 
 	var tabela = document.querySelector("#tabela");
 
-	for (var i = 0; i < Number(qtdApostas); i++) {
-		var tr = document.createElement("tr");
-		var td1 = document.createElement("td");
-		td1.appendChild(document.createTextNode("Jogo " + (i + 1) + "- "));
-		if (tipoJogo == "mega sena") {
-			td1.appendChild(document.createTextNode(megaSena(6)));
-		} else if (tipoJogo == "lotofacil") {
-			td1.appendChild(document.createTextNode(lotoFacil(15)));
-		} else if (tipoJogo == "quina") {
-			td1.appendChild(document.createTextNode(quina(5)));
-		} else if (tipoJogo == "lotomania") {
-			td1.appendChild(document.createTextNode(lotomania(20)));
-		}
+	var tr = document.createElement("tr");
+	var td1 = document.createElement("td");
 
-		tr.appendChild(td1);
-		tabela.insertBefore(tr, tabela.childNodes[i]);
+	td1.appendChild(document.createTextNode("Jogo " + tipoJogo + " - "));
+	if (tipoJogo == "Mega-Sena") {
+		td1.append(document.createTextNode(megaSena(6)));
+	} else if (tipoJogo == "Lotofácil") {
+		td1.append(document.createTextNode(lotoFacil(15)));
+	} else if (tipoJogo == "Quina") {
+		td1.append(document.createTextNode(quina(5)));
+	} else if (tipoJogo == "Lotomania") {
+		td1.append(document.createTextNode(lotomania(20)));
 	}
+
+	tr.appendChild(td1);
+	tabela.appendChild(tr);
 
 }
 

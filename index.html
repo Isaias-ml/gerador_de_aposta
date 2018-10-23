@@ -2,43 +2,34 @@
 <html>
 
 <head>
-	<title>CEF</title>
+	<title>Gerador de Apostas</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width">
-	<script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
-	<div class="container">
-		<h1>Gerador aleatorio de apostas</h1>
+	<div class="container" style="padding-top:50px;">
+		<h1 style="text-align:center;">Gerador de Apostas</h1>
 
 		<hr>
 
 		<div class="form-group">
 			<label for="sel1">Tipo do jogo</label>
 			<select class="form-control" id="sel1">
-				<option id="opcao">mega sena</option>
-				<option id="opcao">lotofacil</option>
-				<option id="opcao">quina</option>
+				<option id="opcao">Mega-Sena</option>
+				<option id="opcao">Lotofácil</option>
+				<option id="opcao">Quina</option>
+				<option id="opcao">Lotomania</option>
 			</select>
-		</div>
-
-		<div class="form-group">
-			<label>Qtd. de numeros apostados por jogo</label><input type="number" class="form-control" name="qtdNumeros" id="qtdNumeros">
-		</div>
-
-		<div class="form-group">
-			<label>Qtd. de jogos a serem gerados</label><input type="number" class="form-control" name="qtdJogos" id="qtdJogos">
 		</div>
 
 		<button class="btn btn-success btn-sm" onclick="gerarAposta()">Gerar Aposta</button><br>
 
-
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<td>Jogo</td>
+					<td style="text-align:center;font-size:x-large;">Jogos</td>
 				</tr>
 			</thead>
 			<tbody id="tabela">
@@ -47,5 +38,6 @@
 		</table>
 	</div>
 </body>
+<script type="text/javascript" src="js/script.js"></script>
 
 </html>
