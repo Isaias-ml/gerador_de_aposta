@@ -9,13 +9,13 @@ function gerarAposta() {
 
 	td1.appendChild(document.createTextNode("Jogo " + tipoJogo + " - "));
 	if (tipoJogo == "Mega-Sena") {
-		td1.append(document.createTextNode(megaSena(6)));
+		td1.append(document.createTextNode(megaSena()));
 	} else if (tipoJogo == "Lotofácil") {
-		td1.append(document.createTextNode(lotoFacil(15)));
+		td1.append(document.createTextNode(lotoFacil()));
 	} else if (tipoJogo == "Quina") {
-		td1.append(document.createTextNode(quina(5)));
+		td1.append(document.createTextNode(quina()));
 	} else if (tipoJogo == "Lotomania") {
-		td1.append(document.createTextNode(lotomania(20)));
+		td1.append(document.createTextNode(lotomania()));
 	}
 
 	tr.appendChild(td1);
@@ -24,10 +24,10 @@ function gerarAposta() {
 }
 
 
-function megaSena(max) {
+function megaSena() {
 	var lista = [];
 	var num;
-	for (var i = 0; i < Number(max); i++) {
+	for (var i = 0; i < 6; i++) {
 		num = getRandomInt(1, 61);
 		if (lista.indexOf(Number(num)) === -1) {
 			lista[i] = Number(num);
@@ -39,10 +39,10 @@ function megaSena(max) {
 	return lista.sort(compararNumeros);
 }
 
-function lotoFacil(max) {
+function lotoFacil() {
 	var lista = [];
 	var num;
-	for (var i = 0; i < Number(max); i++) {
+	for (var i = 0; i < 15; i++) {
 		num = getRandomInt(1, 26);
 		if (lista.indexOf(Number(num)) === -1) {
 			lista[i] = Number(num);
@@ -54,10 +54,10 @@ function lotoFacil(max) {
 	return lista.sort(compararNumeros);
 }
 
-function quina(max) {
+function quina() {
 	var lista = [];
 	var num;
-	for (var i = 0; i < Number(max); i++) {
+	for (var i = 0; i < 5; i++) {
 		num = getRandomInt(1, 81);
 		if (lista.indexOf(Number(num)) === -1) {
 			lista[i] = Number(num);
@@ -69,10 +69,10 @@ function quina(max) {
 	return lista.sort(compararNumeros);
 }
 
-function lotomania(max) {
+function lotomania() {
 	var lista = [];
 	var num;
-	for (var i = 0; i < Number(max); i++) {
+	for (var i = 0; i < 50; i++) {
 		num = getRandomInt(0, 100);
 		if (lista.indexOf(Number(num)) === -1) {
 			lista[i] = Number(num);
