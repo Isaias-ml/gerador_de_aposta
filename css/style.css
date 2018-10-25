@@ -66,3 +66,9 @@ div
 p {
     text-align: center;
 }
+td{
+     word-wrap:break-word;
+}
+table {
+    table-layout:fixed;
+}
