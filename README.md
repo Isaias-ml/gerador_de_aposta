@@ -1,1 +1,0 @@
-# gerador_de_aposta
